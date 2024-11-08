@@ -32,7 +32,7 @@ with st.expander('Data'):
   y_raw = df.species
 
 with st.expander('Data Visualization'):
-  st.success("Bill Length (mm) vs. Body Mass (g))
+  st.success("Bill Length (mm) vs. Body Mass (g)")
   st.scatter_chart(data=df, x='bill_length_mm', y='body_mass_g', color='species')
   st.scatter_chart(data=df, x='flipper_length_mm', y='body_mass_g', color='species')
 
