@@ -2,4 +2,4 @@ import streamlit as st
 
 st.title("🐧 Penguin Species Detection 🐧")
 
-st.write("Hello, World")
+st.info("This app detect the species of penguin according to given data")
