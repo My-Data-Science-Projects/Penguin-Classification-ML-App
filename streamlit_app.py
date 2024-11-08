@@ -5,18 +5,20 @@ st.title("🐧 Penguin Detection App")
 
 st.info("This is ML app to detect the species of penguin according to given data")
 
-st.markdown("""
+st.markdown(
+    """
     <style>
-    .centered-info > div {
+    /* Target the stAlert element for st.info */
+    div[data-testid="stAlert"] {
         text-align: center;
     }
     </style>
-    """, unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True
+)
 
-# Applying the centered CSS to the info box
-st.markdown('<div class="centered-info">', unsafe_allow_html=True)
+# Center-aligned info box
 st.info("This is a centered info message.")
-st.markdown('</div>', unsafe_allow_html=True)
 
 with st.expander('Data'):
   st.write('**Raw data**')
