@@ -21,8 +21,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("🐧 Penguin Detection App")
-
 st.info("This is ML app to detect the species of penguin according to given data")
 
 with st.expander('Data'):
