@@ -31,7 +31,7 @@ with st.expander('**Data**'):
   X_raw = df.drop('species', axis=1)
   y_raw = df.species
 
-with st.expander('Data Visualization'):
+with st.expander('**Data Visualization**'):
   st.info("Bill Length (mm) vs. Body Mass (g)")
   st.scatter_chart(data=df, x='bill_length_mm', y='body_mass_g', color='species')
 
@@ -61,7 +61,7 @@ with st.sidebar:
   input_df = pd.DataFrame(data, index=[0])
   input_penguins = pd.concat([input_df, X_raw], axis=0)
 
-with st.expander('Input Data'):
+with st.expander('**Input Data**'):
   input_df
 
 encode = ['island', 'sex']
