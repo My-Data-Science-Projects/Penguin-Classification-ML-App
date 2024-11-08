@@ -4,8 +4,7 @@ import pandas as pd
 st.markdown(
     """
     <style>
-    /* Center align the st.title element */
-    div[data-testid="stMarkdownContainer"] > h1 {
+    .css-10trblm.e16nr0p33 {  
         text-align: center;
     }
     /* Center align the st.info element */
