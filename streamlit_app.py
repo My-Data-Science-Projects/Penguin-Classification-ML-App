@@ -93,6 +93,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.markdown("<br><br>", unsafe_allow_html=True)
+
 st.dataframe(df_prediction_proba,
              column_config={
                'Adelie': st.column_config.ProgressColumn(
