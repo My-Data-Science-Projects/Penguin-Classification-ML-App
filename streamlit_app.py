@@ -1,5 +1,5 @@
 import streamlit as st
 
-st.title("App Name")
+st.title("🐧 Penguin Species Detection 🐧")
 
 st.write("Hello, World")
