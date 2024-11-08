@@ -118,22 +118,24 @@ st.dataframe(df_prediction_proba,
                'Adelie': st.column_config.ProgressColumn(
                  'Adelie',
                  format='%f',
-                use_container_width=True,
+                width='medium',
                  min_value=0,
                  max_value=1
                ),
                'Chinstrap': st.column_config.ProgressColumn(
                  'Chinstrap',
                  format='%f',
-                   use_container_width=True,
+                width='medium',
                  min_value=0,
                  max_value=1
                ),
                'Gentoo': st.column_config.ProgressColumn(
                  'Gentoo',
                  format='%f',
-                   use_container_width=True,
+                width='medium',
                  min_value=0,
                  max_value=1
                ),
-             }, hide_index=True)
+             }, 
+             hide_index=True,
+            use_container_width=True)
