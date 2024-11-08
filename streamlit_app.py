@@ -34,6 +34,8 @@ with st.expander('Data'):
 with st.expander('Data Visualization'):
   st.success("Bill Length (mm) vs. Body Mass (g)")
   st.scatter_chart(data=df, x='bill_length_mm', y='body_mass_g', color='species')
+
+  st.success("Flipper Length (mm) vs. Body Mass (g)")
   st.scatter_chart(data=df, x='flipper_length_mm', y='body_mass_g', color='species')
 
 with st.sidebar:
