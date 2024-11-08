@@ -29,6 +29,8 @@ with st.expander('Data'):
   st.write('**Raw data**')
   df = pd.read_csv('https://raw.githubusercontent.com/My-Data-Science-Projects/Penguin-Classification-ML-App/refs/heads/main/penguins_data.csv')
   df
+  X_raw = df.drop('species', axis=1)
+  y_raw = df.species
 
 with st.expander('Data Visualization'):
   st.scatter_chart(data=df, x='bill_length_mm', y='body_mass_g', color='species')
