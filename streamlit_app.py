@@ -1,9 +1,22 @@
 import streamlit as st
 import pandas as pd
 
-st.title("🐧 Penguin Detection App 🐧")
+st.title("🐧 Penguin Detection App")
 
 st.info("This is ML app to detect the species of penguin according to given data")
+
+st.markdown("""
+    <style>
+    .centered-info > div {
+        text-align: center;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+# Applying the centered CSS to the info box
+st.markdown('<div class="centered-info">', unsafe_allow_html=True)
+st.info("This is a centered info message.")
+st.markdown('</div>', unsafe_allow_html=True)
 
 with st.expander('Data'):
   st.write('**Raw data**')
