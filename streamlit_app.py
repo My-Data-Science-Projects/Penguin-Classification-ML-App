@@ -3,11 +3,16 @@ import pandas as pd
 
 st.markdown(
     """
+    <div style="text-align: center;">
+        <h1>This is a centered title</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    """
     <style>
-    .css-10trblm.e16nr0p33 {  
-        text-align: center;
-    }
-    /* Center align the st.info element */
     div[data-testid="stAlert"] {
         text-align: center;
     }
