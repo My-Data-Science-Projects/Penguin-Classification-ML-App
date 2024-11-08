@@ -117,8 +117,8 @@ st.dataframe(df_prediction_proba,
              column_config={
                'Adelie': st.column_config.ProgressColumn(
                  'Adelie',
-                 format='%i',
-                width='medium',
+                 format='%f',
+                width='small',
                  min_value=0,
                  max_value=1
                ),
