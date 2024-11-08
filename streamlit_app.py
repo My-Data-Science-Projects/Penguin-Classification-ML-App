@@ -4,7 +4,7 @@ import pandas as pd
 st.markdown(
     """
     <div style="text-align: center;">
-        <h1>This is a centered title</h1>
+        <h1>🐧 Penguin Detection App 🐧</h1>
     </div>
     """,
     unsafe_allow_html=True
