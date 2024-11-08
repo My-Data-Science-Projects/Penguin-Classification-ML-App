@@ -107,11 +107,14 @@ df_prediction_proba.rename(columns={0: 'Adelie',
                                  1: 'Chinstrap',
                                  2: 'Gentoo'})
 
-# Display predicted species
-st.subheader('🐧 Predicted Species :')
+col1, col2 = st.columns(2)
 
-penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
-st.success(str(penguins_species[prediction][0]))
+with col1:
+    st.subheader('🐧 Predicted Species :')
+
+with col2:
+    penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
+    st.success(str(penguins_species[prediction][0]))
 
 st.dataframe(df_prediction_proba,
              column_config={
