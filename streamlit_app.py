@@ -108,27 +108,8 @@ df_prediction_proba.rename(columns={0: 'Adelie',
                                  2: 'Gentoo'})
 
 # Display predicted species
-# st.subheader('Predicted Species')
-st.markdown(
-    """
-    <div style="text-align: center;">
-        <h3>Predicted Species</h3>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown(
-    """
-    <style>
-    /* Center align the st.dataframe */
-    .stDataFrame {
-        display: flex;
-        justify-content: center;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+st.subheader('🐧 Predicted Species :')
+
 st.dataframe(df_prediction_proba,
              column_config={
                'Adelie': st.column_config.ProgressColumn(
