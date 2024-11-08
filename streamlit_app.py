@@ -46,6 +46,7 @@ with st.expander('Data Visualization'):
     
   # Plot the bar chart
   st.bar_chart(pivot_data)
+  pivot_data
 
 with st.sidebar:
   st.header('Input Features')
