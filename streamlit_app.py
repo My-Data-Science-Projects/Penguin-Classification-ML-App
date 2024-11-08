@@ -1,4 +1,4 @@
-import streamlit as st
+iumimport streamlit as st
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
@@ -118,7 +118,7 @@ st.dataframe(df_prediction_proba,
                'Adelie': st.column_config.ProgressColumn(
                  'Adelie',
                  format='%f',
-                width='small',
+                width='medium',
                  min_value=0,
                  max_value=1
                ),
