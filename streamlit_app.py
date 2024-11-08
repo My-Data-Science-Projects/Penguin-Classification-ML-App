@@ -3,12 +3,9 @@ import pandas as pd
 
 st.title("🐧 Penguin Detection App")
 
-st.info("This is ML app to detect the species of penguin according to given data")
-
 st.markdown(
     """
     <style>
-    /* Target the stAlert element for st.info */
     div[data-testid="stAlert"] {
         text-align: center;
     }
@@ -17,8 +14,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Center-aligned info box
-st.info("This is a centered info message.")
+st.info("This is ML app to detect the species of penguin according to given data")
 
 with st.expander('Data'):
   st.write('**Raw data**')
