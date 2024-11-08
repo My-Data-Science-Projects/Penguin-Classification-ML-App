@@ -38,13 +38,9 @@ with st.expander('Data Visualization'):
   st.info("Flipper Length (mm) vs. Body Mass (g)")
   st.scatter_chart(data=df, x='flipper_length_mm', y='body_mass_g', color='species')
 
-  # Count the number of species in each island
+  st.info("Island vs. Species Count")
   species_count = df.groupby(['island', 'species']).size().reset_index(name='count')
-    
-  # Pivot the data to get species as columns for plotting
   pivot_data = species_count.pivot(index='island', columns='species', values='count').fillna(0)
-    
-  # Plot the bar chart
   st.bar_chart(pivot_data)
 
 with st.sidebar:
