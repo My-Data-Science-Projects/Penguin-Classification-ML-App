@@ -29,19 +29,10 @@ with st.expander('Data'):
   st.write('**Raw data**')
   df = pd.read_csv('https://raw.githubusercontent.com/My-Data-Science-Projects/Penguin-Classification-ML-App/refs/heads/main/penguins_data.csv')
   df
-  
-  st.write('**X**')
-  X_raw = df.drop('species', axis=1)
-  X_raw
-
-  st.write('**y**')
-  y_raw = df.species
-  y_raw
 
 with st.expander('Data Visualization'):
   st.scatter_chart(data=df, x='bill_length_mm', y='body_mass_g', color='species')
 
-# Input features
 with st.sidebar:
   st.header('Input features')
   island = st.selectbox('Island', ('Biscoe', 'Dream', 'Torgersen'))
@@ -51,7 +42,6 @@ with st.sidebar:
   body_mass_g = st.slider('Body mass (g)', 2700.0, 6300.0, 4207.0)
   gender = st.selectbox('Gender', ('male', 'female'))
   
-  # Create a DataFrame for the input features
   data = {'island': island,
           'bill_length_mm': bill_length_mm,
           'bill_depth_mm': bill_depth_mm,
@@ -67,16 +57,12 @@ with st.expander('Input features'):
   st.write('**Combined penguins data**')
   input_penguins
 
-
-# Data preparation
-# Encode X
 encode = ['island', 'sex']
 df_penguins = pd.get_dummies(input_penguins, prefix=encode)
 
 X = df_penguins[1:]
 input_row = df_penguins[:1]
 
-# Encode y
 target_mapper = {'Adelie': 0,
                  'Chinstrap': 1,
                  'Gentoo': 2}
@@ -85,12 +71,9 @@ def target_encode(val):
 
 y = y_raw.apply(target_encode)
 
-# Model training and inference
-## Train the ML model
 clf = RandomForestClassifier()
 clf.fit(X, y)
 
-## Apply model to make predictions
 prediction = clf.predict(input_row)
 prediction_proba = clf.predict_proba(input_row)
 
