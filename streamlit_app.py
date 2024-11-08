@@ -94,7 +94,7 @@ df_prediction_proba.rename(columns={0: 'Adelie',
 penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
 # st.success("**Predicted Species :** " + str(penguins_species[prediction][0]))
 st.markdown(
-    f'<div style="font-size: 20px; background-color: #80ed99; color: #344e41; border-radius: 10px; text-align: center; padding: 10px;"><b>Predicted Species :</b> <span style="color: #000000; font-weight: 900;">{penguins_species[prediction][0]}</span></div>',
+    f'<div style="font-size: 20px; background-color: #80ed99; color: #344e41; border-radius: 10px; text-align: center; padding: 10px;"><b>Predicted Species :</b> <span style="color: #000000; font-weight: 700;">{penguins_species[prediction][0]}</span></div>',
     unsafe_allow_html=True
 )
 
