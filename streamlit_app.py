@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 st.markdown(
     """
     <div style="text-align: center;">
-        <h1 style="font-size: 20px;">🐧 Penguin Detection App 🐧</h1>
+        <h1 style="font-size: 36px;">🐧 Penguin Detection App 🐧</h1>
     </div>
     """,
     unsafe_allow_html=True
