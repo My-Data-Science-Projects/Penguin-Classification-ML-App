@@ -17,6 +17,7 @@ st.markdown(
     <style>
     div[data-testid="stAlert"] {
         text-align: center;
+        font-weight: 700;
     }
     </style>
     """,
