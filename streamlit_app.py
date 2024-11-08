@@ -26,7 +26,6 @@ st.markdown(
 st.info("This is ML app to detect the species of penguin according to given data")
 
 with st.expander('Data'):
-  st.write('**Raw data**')
   df = pd.read_csv('https://raw.githubusercontent.com/My-Data-Science-Projects/Penguin-Classification-ML-App/refs/heads/main/penguins_data.csv')
   df
   X_raw = df.drop('species', axis=1)
@@ -36,7 +35,7 @@ with st.expander('Data Visualization'):
   st.scatter_chart(data=df, x='bill_length_mm', y='body_mass_g', color='species')
 
 with st.sidebar:
-  st.header('Input features')
+  st.header('Input Features')
   island = st.selectbox('Island', ('Biscoe', 'Dream', 'Torgersen'))
   bill_length_mm = st.slider('Bill length (mm)', 32.1, 59.6, 43.9)
   bill_depth_mm = st.slider('Bill depth (mm)', 13.1, 21.5, 17.2)
@@ -54,10 +53,8 @@ with st.sidebar:
   input_penguins = pd.concat([input_df, X_raw], axis=0)
 
 with st.expander('Input features'):
-  st.write('**Input penguin**')
+  st.write('**Input Data**')
   input_df
-  st.write('**Combined penguins data**')
-  input_penguins
 
 encode = ['island', 'sex']
 df_penguins = pd.get_dummies(input_penguins, prefix=encode)
