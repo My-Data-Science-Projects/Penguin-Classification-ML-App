@@ -88,7 +88,15 @@ df_prediction_proba.rename(columns={0: 'Adelie',
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader('🐧 Predicted Species :')
+    # st.subheader('🐧 Predicted Species :')
+    st.markdown(
+    """
+    <div style="text-align: center;">
+        <h1>🐧 Predicted Species :</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
 
 with col2:
     penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
