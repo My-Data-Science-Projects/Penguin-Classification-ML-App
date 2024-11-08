@@ -25,7 +25,7 @@ st.markdown(
 
 st.info("This is ML app to detect the species of penguin according to given data")
 
-with st.expander('Data'):
+with st.expander('**Data**'):
   df = pd.read_csv('https://raw.githubusercontent.com/My-Data-Science-Projects/Penguin-Classification-ML-App/refs/heads/main/penguins_data.csv')
   df
   X_raw = df.drop('species', axis=1)
